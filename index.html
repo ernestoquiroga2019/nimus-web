@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIMUS| Ingeniería y Servicios </title>
+    <link rel="icon" type="image/png" href="images/logonimus2.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <head>
+    <!-- Otras etiquetas como meta o title -->
+    <link rel="icon" type="image/png" href="imageslogonimus2.png">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#0ea5e9',
+                        accent: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+    
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Navigation - Transparent over video -->
+   <!-- Navegación Completa -->
+<!-- Menú de Navegación -->
+<nav class="fixed w-full bg-transparent z-50 transition-all duration-300" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            
+            <!-- LOGO (Solo la imagen, sin texto extra porque el logo ya lo tiene) -->
+            <div class="flex items-center mt-4">
+                <a href="#hero">
+                    <img src="images/logonimus2.png" 
+                         alt="Nimus Industrial Logo" 
+                         class="h-40 md:h-50 w-auto max-w-[400px] object-contain bg-transparent">
+                </a>
+            </div>
+
+            <!-- MENÚ (Enlaces) -->
+            <div class="hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-8">
+                    <a href="#hero" class="nav-link text-white hover:text-accent px-3 py-2 rounded-md text-base font-medium transition drop-shadow">Inicio</a>
+                    <a href="#nosotros" class="nav-link text-white hover:text-accent px-3 py-2 rounded-md text-base font-medium transition drop-shadow">Nosotros</a>
+                    <a href="#mision" class="nav-link text-white hover:text-accent px-3 py-2 rounded-md text-base font-medium transition drop-shadow">Misión</a>
+                    <a href="#servicios" class="nav-link text-white hover:text-accent px-3 py-2 rounded-md text-base font-medium transition drop-shadow">Servicios</a>
+                    <a href="#portfolio" class="nav-link text-white hover:text-accent px-3 py-2 rounded-md text-base font-medium transition drop-shadow">Portfolio</a>
+                    <!--<a href="#cobertura" class="nav-link text-white hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition drop-shadow">Cobertura</a>-->
+                    <a href="#equipo" class="nav-link text-white hover:text-accent px-3 py-2 rounded-md text-base font-medium transition drop-shadow">Equipo</a>
+                    <a href="#ubicacion" class="nav-link text-white hover:text-accent px-3 py-2 rounded-md text-base font-medium transition drop-shadow">Ubicación</a>
+                    <a href="#contacto" class="bg-accent text-white px-6 py-2 rounded-full text-base font-medium hover:bg-amber-600 transition drop-shadow shadow-lg">Contacto</a>
+                </div>
+            </div>
+
+            <!-- BOTÓN MÓVIL -->
+            <div class="md:hidden">
+                <button onclick="toggleMobileMenu()" class="text-white hover:text-accent focus:outline-none" id="mobile-btn">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MENÚ MÓVIL -->
+    <div class="md:hidden hidden bg-white shadow-xl border-t border-gray-100" id="mobile-menu">
+        <div class="px-3 pt-3 pb-4 space-y-1">
+            <a href="#hero" class="mobile-link block px-4 py-3 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-primary transition">Inicio</a>
+            <a href="#nosotros" class="mobile-link block px-4 py-3 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-primary transition">Nosotros</a>
+            <a href="#mision" class="mobile-link block px-4 py-3 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-primary transition">Misión</a>
+            <a href="#servicios" class="mobile-link block px-4 py-3 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-primary transition">Servicios</a>
+            <a href="#portfolio" class="mobile-link block px-4 py-3 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-primary transition">Portfolio</a>
+            <a href="#contacto" class="mobile-link block mt-3 px-4 py-3 rounded-md text-base font-medium text-left bg-primary text-white hover:bg-blue-800 transition">Contacto</a>
+        </div>
+    </div>
+</nav>
+    <!-- Hero Section with Full Screen Video -->
+    <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Video Background - No overlay -->
+        <video class="video-background" autoplay muted loop playsinline>
+            <source src="images/videoentrada1.mp4" type="video/mp4">
+            Tu navegador no soporta el tag de video.
+        </video>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-3xl md:text-5xl font-bold text-white mb-6 animate-fade-in drop-shadow-lg">
+                 Excelencia en <span class="text-accent">Ingeniería</span><br>
+             <span class="text-2xl md:text-4xl block mt-2">Ejecución de Obras y Servicios</span>
+            </h1>
+        <p class="text-base md:text-xl text-white mb-10 max-w-3xl mx-auto drop-shadow-md">
+         En <span class="text-accent text-2xl font-bold">NIMUS</span> brindamos servicios de ingeniería y ejecución de obras en el ámbito provincial y nacional, 
+         con equipo humano profesional certificado y de gran trayectoria.
+        </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contacto" class="bg-accent text-white px-8 py-3 rounded-full text-base font-semibold hover:bg-amber-600 transition transform hover:scale-105 shadow-2xl">
+                    Solicitar Cotización
+                </a>
+                <a href="#servicios" class="bg-white/20 backdrop-blur-md border-2 border-white text-white px-8 py-3 rounded-full text-base font-semibold hover:bg-white/30 transition transform hover:scale-105">
+                    Nuestros Servicios
+                </a>
+            </div>
+           
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <!-- Añadimos w-full para que use el espacio y max-w para que no se pegue a los bordes extremos si no quieres -->
+    <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-10 px-4 md:px-10">
+        
+        <div class="flex flex-col items-center justify-center text-center">
+            <div class="text-5xl md:text-7xl font-extrabold text-accent drop-shadow-lg" id="counter1">0</div>
+            <div class="text-blue-800 mt-3 text-lg md:text-xl font-bold uppercase tracking-wider">Proyectos</div>
+        </div>
+
+        <div class="flex flex-col items-center justify-center text-center">
+            <div class="text-5xl md:text-7xl font-extrabold text-accent drop-shadow-lg" id="counter2">0</div>
+            <div class="text-blue-800 mt-3 text-lg md:text-xl font-bold uppercase tracking-wider">Años Exp.</div>
+        </div>
+
+        <div class="flex flex-col items-center justify-center text-center">
+            <div class="text-5xl md:text-7xl font-extrabold text-accent drop-shadow-lg" id="counter3">0</div>
+            <div class="text-blue-800 mt-3 text-lg md:text-xl font-bold uppercase tracking-wider">Profesionales</div>
+        </div>
+        
+    </div>
+
+
+
+
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80" alt="Sobre Nosotros" class="rounded-2xl shadow-2xl">
+                    <div class="absolute -bottom-6 -right-6 bg-primary text-white p-8 rounded-2xl shadow-xl">
+                        <div class="text-5xl font-bold">+15</div>
+                        <div class="text-sm mt-2">Años de<br>Experiencia</div>
+                    </div>
+                </div>
+
+                
+    
+    
+
+                <div>
+                    <h2 class="text-primary font-semibold text-lg mb-2">Sobre Nosotros</h2>
+                    <h3 class="text-4xl font-bold text-gray-900 mb-6">Construimos el futuro con excelencia</h3>
+                    <p class="text-gray-600 text-lg mb-6">
+                        Somos una empresa Argentina con sede en las provincias de Mendoza y
+                        Río Negro, que brinda servicios de ingeniería y ejecución de obras en el ámbito
+                        provincial y nacional.
+                        Contamos con equipo humano profesional plenamente capacitado, certificado y
+                        con gran trayectoria.
+                    </p>
+                    <p class="text-gray-600 text-lg mb-8">
+                        Contamos con equipo humano profesional plenamente capacitado, certificado y
+                        con gran trayectoria en el sector de la construcción e ingeniería.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-accent mr-3 text-xl"></i>
+                            <span class="text-gray-700">Equipo profesional certificado y altamente capacitado</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-accent mr-3 text-xl"></i>
+                            <span class="text-gray-700">Cobertura de proyectos a nivel provincial y nacional</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-accent mr-3 text-xl"></i>
+                            <span class="text-gray-700">Cumplimiento de normas de seguridad y medio ambiente</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-accent mr-3 text-xl"></i>
+                            <span class="text-gray-700">Integración activa con la comunidad</span>
+                        </li>
+                    </ul>
+
+                    
+
+                    <a href="#contacto" class="inline-block mt-8 bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
+                        Conocer Más
+                    </a>
+
+     <!-- Sección a lo ancho total con padding arriba y abajo -->
+
+<!-- Usamos un contenedor que rompe el flujo sin usar w-screen para evitar el scroll horizontal -->
+<!-- El section ocupa el 100% del ancho disponible -->
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section - New Layout -->
+    <section id="mision" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-primary font-semibold text-lg mb-2">Nuestra Esencia</h2>
+                <h3 class="text-4xl font-bold text-gray-900 mb-4">Misión y Valores</h3>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto">Guiados por principios sólidos que aseguran la excelencia en cada proyecto</p>
+            </div>
+            
+            <!-- Mission Statement -->
+            <div class="mb-16">
+                <div class="bg-gradient-to-br from-primary to-secondary p-10 rounded-3xl text-white text-center max-w-4xl mx-auto shadow-xl">
+                    <i class="fas fa-bullseye text-5xl mb-6"></i>
+                    <h4 class="text-3xl font-bold mb-4">Nuestra Misión</h4>
+                    <p class="text-lg leading-relaxed">
+                        Brindar soluciones industriales integrales en proyectos de alta exigencia para el sector Oil & Gas y Energía, operando con capacidad 
+                        de despliegue en la región de Neuquén, Mendoza y zonas industriales críticas.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Values Grid - New Distribution -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="bg-gray-50 p-6 rounded-2xl text-center card-hover border-t-4 border-primary">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-hard-hat text-3xl text-primary"></i>
+                    </div>
+                    <h5 class="font-bold text-gray-500 mb-2">Seguridad</h5>
+                    <p class="text-gray-600 text-sm">Normas estrictas en cada obra</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-2xl text-center card-hover border-t-4 border-accent">
+                    <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-award text-3xl text-accent"></i>
+                    </div>
+                    <h5 class="font-bold text-gray-500 mb-2">Calidad</h5>
+                    <p class="text-gray-600 text-sm">Estándares certificados</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-2xl text-center card-hover border-t-4 border-secondary">
+                    <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clock text-3xl text-secondary"></i>
+                    </div>
+                    <h5 class="font-bold text-gray-500 mb-2">Puntualidad</h5>
+                    <p class="text-gray-600 text-sm">Entrega en tiempo y forma</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-2xl text-center card-hover border-t-4 border-green-500">
+                    <div class="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-leaf text-3xl text-green-500"></i>
+                    </div>
+                    <h5 class="font-bold text-gray-500 mb-2">Medio Ambiente</h5>
+                    <p class="text-gray-600 text-sm">Compromiso sostenible</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-2xl text-center card-hover border-t-4 border-purple-500 col-span-2 md:col-span-1">
+                    <div class="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-3xl text-purple-500"></i>
+                    </div>
+                    <h5 class="font-bold text-gray-500 mb-2">Comunidad</h5>
+                    <p class="text-gray-600 text-sm">Integración activa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+   <!-- Reemplaza todo tu <section id="servicios"> ... </section> por este bloque -->
+<section id="servicios" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-primary font-semibold text-lg mb-2">Lo que hacemos</h2>
+            <h3 class="text-4xl font-bold mb-4">Nuestros Servicios</h3>
+            <p class="text-gray-600 text-lg max-w-3xl mx-auto">Ofrecemos soluciones integrales de ingeniería y construcción adaptadas a cada proyecto</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <!-- Ingeniería -->
+            <a href="ingenieria.html" class="group block bg-white p-6 rounded-2xl shadow-lg card-hover hover:border-b-4 hover:border-primary transition-all">
+                <div class="w-full h-48 mb-4 overflow-hidden rounded-lg">
+                    <img src=images/ingenieria3.jpg alt="Ingeniería - Planos y relevamiento" class="w-full h-full object-contain group-hover:scale-110 transition duration-300">
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">Ingeniería de proyecto</h4>
+                <p class="text-gray-600 text-sm">Estudio de alternativas, ingeniería básica/detalle, relevamiento 2D/3D, planificación y gerenciamiento.</p>
+                <span class="inline-block mt-3 text-primary font-semibold group-hover:translate-x-2 transition">Ver más <i class="fas fa-arrow-right ml-1"></i></span>
+            </a>
+
+            <!-- Flowlines - Ductos -->
+            <a href="ductos.html" class="group block bg-white p-6 rounded-2xl shadow-lg card-hover hover:border-b-4 hover:border-primary transition-all">
+                <div class="w-full h-48 mb-4 overflow-hidden rounded-lg">
+                    <img src="images/gasoducto1.webp" alt="Ductos de petróleo y gas" class="w-full h-full object-contain group-hover:scale-110 transition duration-300">
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">Flowlines - Ductos</h4>
+                <p class="text-gray-600 text-sm">Georeferenciación, apertura de pista, soldadura, ensayos, revestimiento y protección catódica.</p>
+                <span class="inline-block mt-3 text-primary font-semibold group-hover:translate-x-2 transition">Ver más <i class="fas fa-arrow-right ml-1"></i></span>
+            </a>
+
+            <!-- Obras Civiles -->
+            <a href="obrasciviles.html" class="group block bg-white p-6 rounded-2xl shadow-lg card-hover hover:border-b-4 hover:border-primary transition-all">
+                <div class="w-full h-48 mb-4 overflow-hidden rounded-lg">
+                    <img src="images/premoldeados1.jpg" alt="Obras civiles y estructura" class="w-full h-full object-contain group-hover:scale-110 transition duration-300">
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">Obras Civiles</h4>
+                <p class="text-gray-600 text-sm">Plateas, premoldeados, revestimientos, instalaciones sanitarias y desagües.</p>
+                <span class="inline-block mt-3 text-primary font-semibold group-hover:translate-x-2 transition">Ver más <i class="fas fa-arrow-right ml-1"></i></span>
+            </a>
+
+            <!-- Obras Mecánicas -->
+            <a href="obrasmecanicas.html" class="group block bg-white p-6 rounded-2xl shadow-lg card-hover hover:border-b-4 hover:border-primary transition-all">
+                <div class="w-full h-48 mb-4 overflow-hidden rounded-lg">
+                    <img src="images/gas2.jpg" alt="Plantas de proceso y mecánica" class="w-full h-full object-contain group-hover:scale-110 transition duration-300">
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">Obras Mecánicas</h4>
+                <p class="text-gray-600 text-sm">Diseño, construcción y mantenimiento de plantas de tratamiento, acondicionamiento y proceso.</p>
+                <span class="inline-block mt-3 text-primary font-semibold group-hover:translate-x-2 transition">Ver más <i class="fas fa-arrow-right ml-1"></i></span>
+            </a>
+
+            <!-- Piletas de Crudo -->
+            <a href="piletascrudo.html" class="group block bg-white p-6 rounded-2xl shadow-lg card-hover hover:border-b-4 hover:border-primary transition-all">
+                <div class="w-full h-48 mb-4 overflow-hidden rounded-lg">
+                    <img src="images/obrasvarias.jpg" alt="Tanques y piletas de almacenamiento" class="w-full h-full object-contain group-hover:scale-110 transition duration-300">
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">Piletas de Crudo</h4>
+                <p class="text-gray-600 text-sm">Construcción, impermeabilización y mantenimiento de sistemas de almacenamiento.</p>
+                <span class="inline-block mt-3 text-primary font-semibold group-hover:translate-x-2 transition">Ver más <i class="fas fa-arrow-right ml-1"></i></span>
+            </a>
+
+            <!-- Prefabricado y Montaje Metalúrgico -->
+            <a href="prefabricado.html" class="group block bg-white p-6 rounded-2xl shadow-lg card-hover hover:border-b-4 hover:border-primary transition-all">
+                <div class="w-full h-48 mb-4 overflow-hidden rounded-lg">
+                    <img src="images/estructura6.jpg" alt="Estructuras metálicas y galpones" class="w-full h-full object-contain group-hover:scale-110 transition duration-300">
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">Prefabricado y Montaje Metalúrgico</h4>
+                <p class="text-gray-600 text-sm">Corte, biselado, armado por isometría, pasarelas, soportería, escaleras y galpones.</p>
+                <span class="inline-block mt-3 text-primary font-semibold group-hover:translate-x-2 transition">Ver más <i class="fas fa-arrow-right ml-1"></i></span>
+            </a>
+
+            <!-- Obras Eléctricas -->
+            <a href="obraselectricas.html" class="group block bg-white p-6 rounded-2xl shadow-lg card-hover hover:border-b-4 hover:border-primary transition-all">
+                <div class="w-full h-48 mb-4 overflow-hidden rounded-lg">
+                    <img src="images/tableropixel.jpg" alt="Instalaciones eléctricas industriales" class="w-full h-full object-contain group-hover:scale-110 transition duration-300">
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">Obras Eléctricas</h4>
+                <p class="text-gray-600 text-sm">Canalización, ampliación de sistemas, tableros, cableado, configuración y comisionado.</p>
+                <span class="inline-block mt-3 text-primary font-semibold group-hover:translate-x-2 transition">Ver más <i class="fas fa-arrow-right ml-1"></i></span>
+            </a>
+
+            <!-- Instrumentación y Control -->
+            <a href="instrumentacionycontrol.html" class="group block bg-white p-6 rounded-2xl shadow-lg card-hover hover:border-b-4 hover:border-primary transition-all">
+                <div class="w-full h-48 mb-4 overflow-hidden rounded-lg">
+                    <img src="images/tablerocomando.jpg" alt="Tableros de control e instrumentación" class="w-full h-full object-contain group-hover:scale-110 transition duration-300">
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">Instrumentación y Control</h4>
+                <p class="text-gray-600 text-sm">Montaje, cableado, configuración, comisionado y armado de tableros/gabinetes.</p>
+                <span class="inline-block mt-3 text-primary font-semibold group-hover:translate-x-2 transition">Ver más <i class="fas fa-arrow-right ml-1"></i></span>
+            </a>
+        </div>
+    </div>
+</section>
+    <!-- Portfolio Section - Carrusel -->
+<!-- Portfolio Section - Slider Full Width -->
+<section id="portfolio" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-primary font-semibold text-lg mb-2">Nuestro Trabajo</h2>
+            <h3 class="text-4xl font-bold mb-4">Portfolio de Proyectos</h3>
+            <p class="text-gray-600 text-lg max-w-3xl mx-auto">Conozca algunos de nuestros proyectos más destacados</p>
+        </div>
+
+        <!-- Slider Container -->
+        <div class="relative h-[500px] md:h-[600px] overflow-hidden rounded-2xl shadow-2xl">
+            <div id="fullSlider" class="relative h-full">
+                
+                <!-- Slide 1 -->
+                <div class="slider-slide absolute inset-0 transition-opacity duration-1100 opacity-100" data-index="0">
+                    <img src="images/galponNimus.jpg" 
+                         class="w-full h-full object-cover" 
+                         alt="CONSTRUCCIÓN LLAVE EN MANO DE GALPÓN EN PIN NEUQUÉN">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+                        <div class="max-w-3xl">
+                            <p class="text-accent font-semibold text-lg mb-2">PIN NEUQUÉN</p>
+                            <h4 class="text-white text-3xl md:text-4xl font-bold mb-4">Construcción llave en mano de galpón </h4>
+                            <p class="text-gray-200 text-lg">Infraestructura energética de alta complejidad</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Slide 2 -->
+                <div class="slider-slide absolute inset-0 transition-opacity duration-1100 opacity-0" data-index="1">
+                    <!-- Se agregó la clase object-top aquí -->
+                    <img src="images/montajeaislacionNimus.jpg" 
+                        class="w-full h-full object-cover object-top" 
+                        alt="ENARSA">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+                        <div class="max-w-3xl">
+                            <p class="text-accent font-semibold text-lg mb-2">ENERGY AND WORKS - ENARSA</p>
+                            <h4 class="text-white text-2xl md:text-4xl font-bold mb-4">Montaje e Ingeniería de Sistemas Contra Incendio en Tanques de Almacenamiento</h4>
+                            <p class="text-gray-200 text-lg">Infraestructura para transporte de gas</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Slide 3 -->
+                <div class="slider-slide absolute inset-0 transition-opacity duration-1100 opacity-0" data-index="2">
+                    <img src="images/torreisomaxNimus.jpg" 
+                    class="w-full h-full object-cover object-top" 
+                         alt="SIAM-ARCON">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+                        <div class="max-w-3xl">
+                            <p class="text-accent font-semibold text-lg mb-2">SIAM-ARCON</p>
+                            <h4 class="text-white text-2xl md:text-4xl font-bold mb-4">Montaje de aislación en torre E11-ISOMAX</h4>
+                            <p class="text-gray-200 text-lg">Neuquén - Estructuras metálicas industriales</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="slider-slide absolute inset-0 transition-opacity duration-1100 opacity-0" data-index="3">
+                    <img src="images/fraccionadoraNimus.jpg" 
+                         class="w-full h-full object-cover" 
+                         alt="BUCCOLINI - YPF">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+                        <div class="max-w-3xl">
+                            <p class="text-accent font-semibold text-lg mb-2">BUCCOLINI SA</p>
+                            <h4 class="text-white text-3xl md:text-4xl font-bold mb-4">Torre fraccionadora de Nafta</h4>
+                            <p class="text-gray-200 text-lg">Refineria YPF - La Plata</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="slider-slide absolute inset-0 transition-opacity duration-1100 opacity-0" data-index="4">
+                    <img src="images/intercambiadorNimus.jpg" 
+                         class="w-full h-full object-cover" 
+                         alt="TECPETROL">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+                        <div class="max-w-3xl">
+                            <p class="text-accent font-semibold text-lg mb-2">YPF</p>
+                            <h4 class="text-white text-3xl md:text-4xl font-bold mb-4">Intercambiador de calor, 1560 Tubos - Longitud 6mt. </h4>
+                            <p class="text-gray-200 text-lg">YPF CILC</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 6 -->
+                <div class="slider-slide absolute inset-0 transition-opacity duration-1100 opacity-0" data-index="5">
+                    <img src="images/pararayosNimus.jpg" 
+                         class="w-full h-full object-cover" 
+                         alt="PECOM-CHEVRON">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+                        <div class="max-w-3xl">
+                            <p class="text-accent font-semibold text-lg mb-2">PECOM-CHEVRON</p>
+                            <h4 class="text-white text-3xl md:text-4xl font-bold mb-4">Fabricación y montaje de torre pararrayos YT-34</h4>
+                            <p class="text-gray-200 text-lg">Montaje metalúrgico industrial</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flechas de Navegación -->
+            <button onclick="changeSlide(-1)" 
+                    class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-3 md:p-4 rounded-full backdrop-blur transition-all z-10">
+                <i class="fas fa-chevron-left text-xl md:text-2xl"></i>
+            </button>
+            <button onclick="changeSlide(1)" 
+                    class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-3 md:p-4 rounded-full backdrop-blur transition-all z-10">
+                <i class="fas fa-chevron-right text-xl md:text-2xl"></i>
+            </button>
+
+            <!-- Indicadores/Dots -->
+            <div class="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-10" id="sliderDots">
+                <button onclick="goToSlide(0)" class="slider-dot w-3 h-3 rounded-full bg-white transition-all"></button>
+                <button onclick="goToSlide(1)" class="slider-dot w-3 h-3 rounded-full bg-white/50 transition-all"></button>
+                <button onclick="goToSlide(2)" class="slider-dot w-3 h-3 rounded-full bg-white/50 transition-all"></button>
+                <button onclick="goToSlide(3)" class="slider-dot w-3 h-3 rounded-full bg-white/50 transition-all"></button>
+                <button onclick="goToSlide(4)" class="slider-dot w-3 h-3 rounded-full bg-white/50 transition-all"></button>
+                <button onclick="goToSlide(5)" class="slider-dot w-3 h-3 rounded-full bg-white/50 transition-all"></button>
+            </div>
+        </div>
+
+        <!-- Miniaturas debajo del slider (opcional) -->
+        <div class="grid grid-cols-6 gap-4 mt-6">
+            <button onclick="goToSlide(0)" class="thumbnail-btn opacity-60 hover:opacity-100 transition rounded-lg overflow-hidden">
+                <img src="images/galponNimus.jpg" class="w-full h-20 object-cover" alt="Slide 1">
+            </button>
+            <button onclick="goToSlide(1)" class="thumbnail-btn opacity-60 hover:opacity-100 transition rounded-lg overflow-hidden">
+                <img src="images/montajeaislacionNimus.jpg" class="w-full h-20 object-cover" alt="Slide 2">
+            </button>
+            <button onclick="goToSlide(2)" class="thumbnail-btn opacity-60 hover:opacity-100 transition rounded-lg overflow-hidden">
+                <img src="images/torreisomaxNimus.jpg" class="w-full h-20 object-cover" alt="Slide 3">
+            </button>
+            <button onclick="goToSlide(3)" class="thumbnail-btn opacity-60 hover:opacity-100 transition rounded-lg overflow-hidden">
+                <img src="images/fraccionadoraNimus.jpg" class="w-full h-20 object-cover" alt="Slide 4">
+            </button>
+            <button onclick="goToSlide(4)" class="thumbnail-btn opacity-60 hover:opacity-100 transition rounded-lg overflow-hidden">
+                <img src="images/intercambiadorNimus.jpg" class="w-full h-20 object-cover" alt="Slide 5">
+            </button>
+            <button onclick="goToSlide(5)" class="thumbnail-btn opacity-60 hover:opacity-100 transition rounded-lg overflow-hidden">
+                <img src="images/pararayosNimus.jpg" class="w-full h-20 object-cover" alt="Slide 6">
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript para el Slider -->
+<script>
+let currentSlide = 0;
+let autoPlayInterval;
+const slides = document.querySelectorAll('.slider-slide');
+const dots = document.querySelectorAll('.slider-dot');
+const thumbnails = document.querySelectorAll('.thumbnail-btn');
+
+function updateSlider() {
+    slides.forEach((slide, index) => {
+        slide.style.opacity = index === currentSlide ? '1' : '0';
+    });
+    
+    dots.forEach((dot, index) => {
+        dot.classList.remove('bg-white', 'w-8');
+        dot.classList.add('bg-white/50');
+        if (index === currentSlide) {
+            dot.classList.remove('bg-white/50');
+            dot.classList.add('bg-white', 'w-8');
+        }
+    });
+    
+    thumbnails.forEach((thumb, index) => {
+        thumb.classList.remove('opacity-100', 'ring-2', 'ring-primary');
+        thumb.classList.add('opacity-60');
+        if (index === currentSlide) {
+            thumb.classList.remove('opacity-60');
+            thumb.classList.add('opacity-100', 'ring-2', 'ring-primary');
+        }
+    });
+}
+
+function changeSlide(direction) {
+    currentSlide += direction;
+    
+    if (currentSlide < 0) currentSlide = slides.length - 1;
+    if (currentSlide >= slides.length) currentSlide = 0;
+    
+    updateSlider();
+    resetAutoPlay();
+}
+
+function goToSlide(index) {
+    currentSlide = index;
+    updateSlider();
+    resetAutoPlay();
+}
+
+function startAutoPlay() {
+    autoPlayInterval = setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlider();
+    }, 5000); // Cambia cada 5 segundos
+}
+
+function resetAutoPlay() {
+    clearInterval(autoPlayInterval);
+    startAutoPlay();
+}
+
+// Pausar auto-play al hacer hover
+document.querySelector('#portfolio').addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
+document.querySelector('#portfolio').addEventListener('mouseleave', startAutoPlay);
+
+// Inicializar
+updateSlider();
+startAutoPlay();
+
+// Teclado
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') changeSlide(-1);
+    if (e.key === 'ArrowRight') changeSlide(1);
+});
+</script>
+
+   
+    <!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img">
+</div>
+
+
+    <!-- Coverage Section -->
+    <section id="cobertura" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-primary font-semibold text-lg mb-2">Dónde Estamos</h2>
+                <h3 class="text-4xl font-bold mb-4">Cobertura y Ubicación</h3>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto">Presentes a nivel provincial y nacional con capacidad operativa en todo el territorio</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center card-hover">
+                    <i class="fas fa-map-marked-alt text-5xl text-primary mb-4"></i>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Cobertura Provincial</h4>
+                    <p class="text-gray-600">Presencia activa en obras y proyectos a lo largo de toda la provincia con equipos desplegados.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center card-hover">
+                    <i class="fas fa-globe-americas text-5xl text-primary mb-4"></i>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Cobertura Nacional</h4>
+                    <p class="text-gray-600">Capacidad operativa para ejecutar proyectos en cualquier punto del territorio nacional.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center card-hover">
+                    <i class="fas fa-truck-loading text-5xl text-primary mb-4"></i>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Logística Integral</h4>
+                    <p class="text-gray-600">Flota propia de maquinaria y equipamiento para movilización rápida a obra.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center card-hover">
+                    <i class="fas fa-clock text-5xl text-primary mb-4"></i>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Disponibilidad 24/7</h4>
+                    <p class="text-gray-600">Atención y respuesta inmediata para emergencias y requerimientos de nuestros clientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="equipo" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-primary font-semibold text-lg mb-2">Capital Humano</h2>
+                <h3 class="text-4xl font-bold text-gray-900 mb-4">Nuestro Equipo</h3>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto">Profesionales plenamente capacitados, certificados y con gran trayectoria</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg card-hover">
+                    <i class="fas fa-user-graduate text-5xl text-primary mb-4"></i>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Profesionales Certificados</h4>
+                    <p class="text-gray-600">Ingenieros civiles, mecánicos, eléctricos y arquitectos con certificaciones vigentes y especialización continua.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg card-hover">
+                    <i class="fas fa-chalkboard-teacher text-5xl text-primary mb-4"></i>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Capacitación Continua</h4>
+                    <p class="text-gray-600">Programas de formación permanente en seguridad, normativas vigentes y nuevas tecnologías de construcción.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg card-hover">
+                    <i class="fas fa-award text-5xl text-primary mb-4"></i>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Gran Trayectoria</h4>
+                    <p class="text-gray-600">Equipo con amplia experiencia comprobable en proyectos de envergadura a nivel provincial y nacional.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg card-hover">
+                    <i class="fas fa-truck-monster text-5xl text-primary mb-4"></i>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Maquinaria Propia</h4>
+                    <p class="text-gray-600">Contamos con flota de maquinaria pesada y equipamiento tecnológico para garantizar la eficiencia operativa.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg card-hover">
+                    <i class="fas fa-shield-alt text-5xl text-primary mb-4"></i>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Seguridad Laboral</h4>
+                    <p class="text-gray-600">Protocolos estrictos de seguridad e higiene industrial, cumpliendo todas las normativas vigentes.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg card-hover">
+                    <i class="fas fa-hands-helping text-5xl text-primary mb-4"></i>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Compromiso Social</h4>
+                    <p class="text-gray-600">Integración activa con las comunidades locales, generando empleo y desarrollo sustentable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Maps Section -->
+    <section id="ubicacion" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-primary font-semibold text-lg mb-2">Encuéntranos</h2>
+                <h3 class="text-4xl font-bold mb-4">Nuestra Ubicación</h3>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto">Visítanos en nuestras oficinas Parque industrial de Lujan-Mendoza o contáctanos para coordinar una reunión</p>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-2xl mb-12">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3342.980751663065!2d-68.964404!3d-33.083290999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzPCsDA0JzU5LjkiUyA2OMKwNTcnNTEuOSJX!5e0!3m2!1ses-419!2sar!4v1789730649281!5m2!1ses-419!2sar"   width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"  loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+                     
+                  
+                </iframe>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center bg-white p-6 rounded-2xl shadow-lg">
+                    <i class="fas fa-map-marker-alt text-4xl text-primary mb-4"></i>
+                    <h4 class="font-bold text-gray-900 mb-2">Dirección</h4>
+                    <p class="text-gray-600">Parque Industrial<br>Lujan, Mendoza</p>
+                </div>
+                <div class="text-center bg-white p-6 rounded-2xl shadow-lg">
+                    <i class="fas fa-phone text-4xl text-primary mb-4"></i>
+                    <h4 class="font-bold text-gray-900 mb-2">Teléfono</h4>
+                    <p class="text-gray-600">+54 9 261 468-6886</p>
+                </div>
+                <div class="text-center bg-white p-6 rounded-2xl shadow-lg">
+                    <i class="fas fa-clock text-4xl text-primary mb-4"></i>
+                    <h4 class="font-bold text-gray-900 mb-2">Horario</h4>
+                    <p class="text-gray-600">Lun - Vie: 08:00 - 18:00 hs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-primary to-secondary">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">¿Tiene un proyecto en mente?</h2>
+            <p class="text-xl text-white/90 mb-10">Contáctenos hoy y descubra cómo podemos hacerlo realidad con calidad y compromiso.</p>
+            <a href="#contacto" class="inline-block bg-accent text-white px-12 py-5 rounded-full text-xl font-semibold hover:bg-amber-600 transition transform hover:scale-105 shadow-2xl">
+                Contactar Ahora
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                
+                <h3 class="text-3xl font-bold mb-4">Contacto</h3>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto">Estamos listos para atender su consulta y brindarle la mejor solución</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h4 class="text-3xl font-bold mb-4">Información de Contacto</h4>
+                    <p class="text-gray-600 mb-8">No dude en comunicarse con nosotros por cualquier consulta.</p>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary text-2xl mt-1 mr-4"></i>
+                            <div>
+                                <h5 class="text-gray-600 hover:text-primary">Dirección</h5>
+                                <p class="text-gray-600">Av. Principal 1234, Ciudad, Provincia</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-phone text-primary text-2xl mt-1 mr-4"></i>
+                            <div>
+                                <h5 class="text-gray-600 hover:text-primary">Teléfono</h5>
+                                <a href="tel:+5492614686886" class="text-gray-600 hover:text-primary">+54 9 261 468-6886</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-primary text-2xl mt-1 mr-4"></i>
+                            <div>
+                                <h5 class="text-gray-600 hover:text-primary">Email</h5>
+                                <a href="mailto:vgomez@nimus.com.ar" class="text-gray-600 hover:text-primary">vgomez@nimus.com.ar</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-primary text-2xl mt-1 mr-4"></i>
+                            <div>
+                                <h5 class="text-gray-600 hover:text-primary">Horario</h5>
+                                <p class="text-gray-600">Lunes a Viernes: 08:00 - 18:00 hs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-6">Envíenos su consulta</h4>
+                    <p class="text-gray-600 mb-6">Complete el formulario y nos pondremos en contacto a la brevedad.</p>
+    
+    <!-- formulario de contacto  -->
+     <form id="contactForm" class="space-y-6" action="enviar.php" method="POST">
+    <div>
+        <input type="text" name="nombre" placeholder="Nombre completo" required 
+               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
+    </div>
+    <div>
+        <input type="email" name="email" placeholder="Email" required 
+               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
+    </div>
+    <div>
+        <input type="tel" name="telefono" placeholder="Teléfono" 
+               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
+    </div>
+    <div>
+        <select name="servicio" 
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
+            <option value="">Seleccione un servicio...</option>
+            <option value="Ingeniería">Ingeniería</option>
+            <option value="Flowlines - Ductos">Flowlines - Ductos</option>
+            <option value="Obras Civiles">Obras Civiles</option>
+            <option value="Obras Mecánicas">Obras Mecánicas</option>
+            <option value="Piletas de Crudo">Piletas de Crudo</option>
+            <option value="Prefabricado y Montaje Metalúrgico">Prefabricado y Montaje Metalúrgico</option>
+            <option value="Obras Eléctricas">Obras Eléctricas</option>
+            <option value="Instrumentación y Control">Instrumentación y Control</option>
+            <option value="Otro">Otro</option>
+        </select>
+    </div>
+    <div>
+        <textarea name="mensaje" placeholder="Mensaje" rows="4" required 
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"></textarea>
+    </div>
+    <button type="submit" id="submitBtn" 
+            class="w-full bg-primary text-white py-4 rounded-lg font-semibold hover:bg-blue-700 transition transform hover:scale-105">
+        Enviar Mensaje
+    </button>
+</form>
+
+<div id="successMessage" class="hidden mt-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+    <i class="fas fa-check-circle mr-2"></i> ¡Mensaje enviado! Nos pondremos en contacto con usted a la brevedad.
+</div>
+                  
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox - MUST be outside footer -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+        <span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
+        <img id="lightbox-img" src="" alt="Imagen ampliada" onclick="event.stopPropagation()">
+    </div>
+
+    <!-- Footer -->
+   <!-- Se cambió bg-gray-900 por bg-[#0f172a] para unificar el color de fondo exacto del logo -->
+<footer class="bg-[#0f172a] text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+            <div class="col-span-2">
+                <!-- Se ajustó el tamaño controlado del logo con w-72 h-auto object-contain y se corrigió el alt -->
+                <img src="images/logonimus3.png" 
+                     class="w-72 h-auto object-contain mb-4" 
+                     alt="NIMUS INDUSTRIAL S.A.S.">
+                <p class="text-gray-400 mb-4">Empresa líder en servicios de ingeniería y ejecución de obras. </p>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-4">Navegación</h4>
+                <ul class="space-y-2">
+                    <li><a href="#hero" class="text-gray-400 hover:text-white transition">Inicio</a></li>
+                    <li><a href="#nosotros" class="text-gray-400 hover:text-white transition">Nosotros</a></li>
+                    <li><a href="#mision" class="text-gray-400 hover:text-white transition">Misión</a></li>
+                    <li><a href="#servicios" class="text-gray-400 hover:text-white transition">Servicios</a></li>
+                    <li><a href="#portfolio" class="text-gray-400 hover:text-white transition">Portfolio</a></li>
+                    <li><a href="#contacto" class="text-gray-400 hover:text-white transition">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-4">Contacto</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><i class="fas fa-map-marker-alt mr-2"></i> Av. Principal 1234</li>
+                    <li><i class="fas fa-phone mr-2"></i> +54 9 261 4686886</li>
+                    <li><i class="fas fa-envelope mr-2"></i> vgomez@nimus.com.ar</li>
+                    <li><i class="fas fa-clock mr-2"></i> Lun - Vie: 08:00 - 18:00</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Se cambió border-gray-800 por un tono sutil acorde al nuevo fondo azul -->
+        <div class="border-t border-slate-800 pt-8 text-center">
+            <p class="text-gray-400">&copy; 2026 NIMUS. Todos los derechos reservados. | Ingeniería y Ejecución de Obras</p>
+        </div>
+    </div>
+    <button id="backToTop" class="back-to-top" title="Volver arriba">
+        <span>↑</span>
+    </button>
+</footer>
+
+
+    <script
+       src="js/main.js">
+    </script>
+    <!-- <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" src=""> -->
+</div>
+<!-- Botón de WhatsApp Flotante -->
+<a href="https://wa.me/5492614686886" 
+   class="whatsapp-float" 
+   target="_blank" 
+   rel="noopener noreferrer">
+    <svg viewBox="0 0 32 32" class="whatsapp-icon">
+        <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.733 5.476 2.015 7.783l-2.015 7.358 7.534-1.977c2.344 1.205 5.002 1.894 7.821 1.894 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.35c-2.484 0-4.819-0.612-6.868-1.685l-0.493-0.258-4.483 1.176 1.2-4.382-0.283-0.449c-1.189-1.884-1.819-4.079-1.819-6.398 0-6.617 5.383-12 12-12s12 5.383 12 12-5.383 12-12 12zM23.167 19.385c-0.392-0.196-2.32-1.145-2.679-1.276-0.359-0.131-0.621-0.196-0.882 0.196s-1.012 1.276-1.241 1.537c-0.229 0.261-0.457 0.294-0.849 0.098-0.392-0.196-1.656-0.61-3.155-1.947-1.166-1.040-1.954-2.324-2.183-2.716-0.229-0.392-0.024-0.605 0.171-0.8s0.392-0.457 0.588-0.686c0.196-0.229 0.261-0.392 0.392-0.653s0.065-0.49-0.033-0.686c-0.098-0.196-0.882-2.123-1.209-2.907-0.319-0.764-0.643-0.661-0.882-0.673-0.229-0.011-0.49-0.011-0.751-0.011s-0.686 0.098-1.045 0.49c-0.359 0.392-1.372 1.34-1.372 3.267s1.405 3.789 1.601 4.05c0.196 0.261 2.764 4.22 6.696 5.92 0.935 0.404 1.666 0.646 2.235 0.826 0.939 0.298 1.794 0.256 2.47 0.155 0.754-0.113 2.32-0.947 2.646-1.862s0.326-1.7 0.229-1.862c-0.097-0.163-0.359-0.261-0.751-0.457z"></path>
+    </svg>
+</a>
+
+</body>
+</html>

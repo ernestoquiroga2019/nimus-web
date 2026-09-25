@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowlines - Ductos | LCservicios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script>
+        tailwind.config = { theme: { extend: { colors: { primary: '#1e3a8a', secondary: '#0f172a', accent: '#b45309' } } } }
+    </script>
+    <style>
+        @keyframes slideInLeft { from { transform: translateX(-80px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+        @keyframes slideInRight { from { transform: translateX(80px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+        .anim-left { animation: slideInLeft 0.8s ease-out forwards; }
+        .anim-right { animation: slideInRight 0.8s ease-out forwards; }
+        .delay-200 { animation-delay: 0.2s; opacity: 0; }
+    </style>
+</head>
+<body class="font-sans antialiased bg-gray-50">
+    
+       
+    <header class="pt-28 pb-16 bg-gradient-to-r from-primary to-secondary text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 anim-left">Flowlines - Ductos</h1>
+            <p class="text-lg md:text-xl opacity-90 anim-right delay-200">Construcción, montaje y mantenimiento integral de sistemas de transporte de fluidos</p>
+        </div>
+    </header>
+    <main class="py-12 md:py-16 bg-gray-50">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Contenedor Central -->
+            <div class="w-full flex flex-col items-center">
+                
+                <!-- Imagen centrada y ancha -->
+                <div class="w-full rounded-2xl shadow-2xl overflow-hidden bg-white">
+                    <img src="images/DuctosNimus.jpg" 
+     alt="Ingeniería NIMUS" 
+     class="w-full h-[230px] sm:h-[450px] md:h-[640px] object-cover object-left rounded-2xl shadow-2xl">
+                </div>
+                
+                <!-- Botones centrados debajo -->
+                   <!-- Botones centrados debajo -->
+            <div class="flex flex-col sm:flex-row gap-4 mt-8 justify-center w-full sm:w-auto">
+                <a href="index.html#servicios" class="inline-flex justify-center items-center bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-amber-600 transition shadow-lg min-w-[220px]">
+                    <i class="fas fa-arrow-left mr-2"></i> Volver a Servicios
+                </a>
+                <a href="index.html#contacto" class="inline-flex justify-center items-center bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-amber-600 transition shadow-lg min-w-[220px]">
+                    Solicitar Cotización <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            </div>
+            
+        </div>
+    </main>
+    <footer class="bg-[#0f172a] text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-2">
+                    <!-- Se ajustó el tamaño controlado del logo con w-72 h-auto object-contain y se corrigió el alt -->
+                    <img src="images/logonimus3.png" 
+                         class="w-72 h-auto object-contain mb-4" 
+                         alt="NIMUS INDUSTRIAL S.A.S.">
+                    <p class="text-gray-400 mb-4">Empresa líder en servicios de ingeniería y ejecución de obras. </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Navegación</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#hero" class="text-gray-400 hover:text-white transition">Inicio</a></li>
+                        <li><a href="index.html#nosotros" class="text-gray-400 hover:text-white transition">Nosotros</a></li>
+                        <li><a href="index.html#mision" class="text-gray-400 hover:text-white transition">Misión</a></li>
+                        <li><a href="index.html#servicios" class="text-gray-400 hover:text-white transition">Servicios</a></li>
+                        <li><a href="index.html#portfolio" class="text-gray-400 hover:text-white transition">Portfolio</a></li>
+                        <li><a href="index.html#contacto" class="text-gray-400 hover:text-white transition">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Av. Principal 1234</li>
+                        <li><i class="fas fa-phone mr-2"></i> +54 9 261 4686886</li>
+                        <li><i class="fas fa-envelope mr-2"></i> vgomez@nimus.com.ar</li>
+                        <li><i class="fas fa-clock mr-2"></i> Lun - Vie: 08:00 - 18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Se cambió border-gray-800 por un tono sutil acorde al nuevo fondo azul -->
+            <div class="border-t border-slate-800 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2026 NIMUS. Todos los derechos reservados. | Ingeniería y Ejecución de Obras</p>
+            </div>
+        </div>
+        <button id="backToTop" class="back-to-top" title="Volver arriba">
+            <span>↑</span>
+        </button>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
